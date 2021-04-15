@@ -1,0 +1,431 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-image:url("wp2.jpeg");
+	background-position: center;
+	background-size: cover;
+	margin-top: 40px;
+}
+.surveyform{
+	width: 1000px;
+	background-color: rgba(255, 255, 255, 0.95);
+	margin: auto;
+	color: #000000;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 10px 10px 0px 0px;	
+}
+.main{
+	background-color: rgba(245, 241, 226, 0.95);
+	width: 1000px;
+	margin: auto;
+}
+
+.intro{
+	margin-left: 35px;
+	margin-right: 35px;
+	text-align: center;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+	background-repeat: no-repeat;
+  background-size: 5000px 5000px;
+}
+
+input[type="text" ] {
+	width: 50px;
+	margin-left: 100px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	background-color: rgba(235, 235, 189, 0.8);
+	padding: 2px 35px;     
+	margin: 2px 0;
+}
+
+input[type="textarea" ] {
+	width: 650px;
+	margin-left: 100px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	background-color: rgba(235, 235, 189, 0.8);
+	padding: 2px 35px;     
+	margin: 2px 0;
+}
+
+.name{
+	margin-left: 50px;
+	margin-top: 35px;
+	color: black;
+	font-size: 18px;
+}
+
+.email{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+}
+
+.ageWise{
+	margin-left: 50px;
+	margin-top: 25px;
+	
+	color: black;
+	font-size: 18px;
+}
+
+.agelist{
+	/* margin-left: 0px; */
+	/* margin-top: 25px; */
+	line-height: 35px;
+	color: black;
+	font-size: 18px;
+}
+
+.emp{
+	margin-left: 50px;
+	margin-top: 15px;
+	color: black;
+	font-size: 18px;
+}
+
+.emplist{
+	width: 180px;
+	/* margin-left: 20px; */
+	margin: 0px 0;
+	margin-top: 15px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	background-color: rgba(235, 235, 189, 0.8);
+	padding: 2px 35px;     
+	color: black;
+	/* font-size: 18px; */
+}
+
+.city{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+}
+
+.gender{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+}
+
+.ethnicity{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 35px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.ethnicitylist{
+	line-height: 25px;
+}
+
+.often{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.feel{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.howsafe{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.exp{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+/* font-weight: 700; */
+}
+
+.places{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.particular{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.seasons{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.particularseasons{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.times{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.particulartimes{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.conditions{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.particularconditions{
+	margin-left: 50px;
+	margin-top: 25px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.stranger{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.apps{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.connapps{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+}
+
+.walkingapps{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.safeapps{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+}
+
+.nameapp{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+}
+
+.like{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.dislike{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.solution{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.tech{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.comments{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.interview{
+	margin-left: 50px;
+	margin-top: 25px;
+	line-height: 25px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	/* font-weight: 700; */
+}
+
+.thankyou{
+	/* margin-left: 50px; */
+	margin-top: 50px;
+	margin-bottom: 50px;
+	line-height: 50px;
+	margin-right: 15px;
+	color: black;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+input[type="text" ] {
+	width: 50px;
+	margin-left: 100;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	background-color: rgba(235, 235, 189, 0.8);
+	padding: 2px 35px;     
+	margin: 2px 0;
+}
+
+table tr td { text-align:center;}
+
+table.placestable tbody td:nth-of-type(even),
+		table.placestable th:nth-of-type(even){
+			background: rgb(235, 227, 209);
+		}
+
+table.placestable tbody tr:nth-of-type(even),
+		table.placestable nth-of-type:nth-of-type(even){
+			background: rgb(228, 224, 204);
+		}
+
+table.seasonstable tbody td:nth-of-type(even),
+		table.seasonstable nth-of-type:nth-of-type(even){
+			background: rgb(235, 227, 209);
+		}
+
+table.seasonstable tbody tr:nth-of-type(even),
+		table.seasonstable nth-of-type:nth-of-type(even){
+			background: rgb(228, 224, 204);
+		}
+
+table.timestable tbody td:nth-of-type(even),
+		table.timestable th:nth-of-type(even){
+			background: rgb(235, 227, 209);
+		}
+table.timestable tbody tr:nth-of-type(even),
+		table.timestable nth-of-type:nth-of-type(even){
+			background: rgb(228, 224, 204);
+		}		
+table.conditionstable tbody td:nth-of-type(even),
+		table.conditionstable th:nth-of-type(even){
+			background: rgb(235, 227, 209);
+		}
+table.conditionstable tbody tr:nth-of-type(even),
+		table.conditionstable nth-of-type:nth-of-type(even){
+			background: rgb(228, 224, 204);
+		}
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color :rgb(66, 66, 66, 0.35);
+	color: white;
+	margin-right: 50px;
+	text-align: right;
+}
