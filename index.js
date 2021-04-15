@@ -1,3 +1,7 @@
+function emp(imp){
+  console.log(imp)
+}
+
 function genderFn(inp){
   if (inp == "other"){
     document.getElementById('genother').style.display = "inline" 
