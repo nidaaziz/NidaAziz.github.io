@@ -25,7 +25,7 @@ body{
 
 .intro{
 	margin-left: 35px;
-	margin-right: 35px;
+	margin-right: 50px;
 	text-align: center;
 	color: black;
 	font-size: 18px;
@@ -34,10 +34,11 @@ body{
   background-size: 5000px 5000px;
 }
 
+
 input[type="text" ] {
 	width: 50px;
 	margin-left: 100px;
-	margin-left: 100px;
+	margin-right: 50px;
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #000000;
@@ -47,9 +48,9 @@ input[type="text" ] {
 }
 
 input[type="textarea" ] {
-	width: 850px;
+	width: 825px;
 	margin-left: 100px;
-	margin-right: 100px;
+	margin-right: 50px;
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #000000;
@@ -167,7 +168,6 @@ input[type="textarea" ] {
 	margin-top: 25px;
 	margin-right: 50px;
 	line-height: 25px;
-	margin-right: 15px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -178,7 +178,6 @@ input[type="textarea" ] {
 	margin-left: 50px;
 	margin-top: 25px;
 	line-height: 25px;
-	margin-right: 15px;
 	color: black;
 	font-size: 18px;
 /* font-weight: 700; */
@@ -189,7 +188,6 @@ input[type="textarea" ] {
 	margin-top: 25px;
 	margin-right: 50px;
 	line-height: 25px;
-	margin-right: 15px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -208,7 +206,7 @@ input[type="textarea" ] {
 	margin-left: 50px;
 	margin-top: 25px;
 	line-height: 25px;
-	margin-right: 15px;
+	margin-right: 50px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -217,6 +215,7 @@ input[type="textarea" ] {
 .particularseasons{
 	margin-left: 50px;
 	margin-top: 25px;
+	margin-right: 50px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -227,7 +226,6 @@ input[type="textarea" ] {
 	margin-top: 25px;
 	margin-right: 50px;
 	line-height: 25px;
-	margin-right: 15px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -247,7 +245,6 @@ input[type="textarea" ] {
 	margin-right: 50px;
 	margin-top: 25px;
 	line-height: 25px;
-	margin-right: 50px;
 	color: black;
 	font-size: 18px;
 	/* font-weight: 700; */
@@ -390,17 +387,6 @@ input[type="textarea" ] {
 	font-weight: 700;
 }
 
-input[type="text" ] {
-	width: 50px;
-	margin-left: 100px;
-	margin-right: 50px;
-	background: transparent;
-	border: none;
-	border-bottom: 1px solid #000000;
-	background-color: rgba(235, 235, 189, 0.8);
-	padding: 2px 35px;     
-	margin: 2px 0;
-}
 
 table tr td { text-align:center;}
 
