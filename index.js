@@ -27,16 +27,6 @@ function ethnicFn(inp){
   } 
 }
 
-function bigImg(x) {
-  
-  x.style.height = "20px";
-  x.style.width = "20px";
-}
-
-function normalImg(x) {
-  x.style.height = "12px";
-  x.style.width = "12px";
-}
 
 function walkingappsFn(answer){
     document.getElementById(answer+'Question').style.display = "block";
@@ -61,4 +51,8 @@ function safeappsFn(answer){
   }
 
   
-
+function myFunction() {
+    document.getElementById("myForm").submit();
+      location.href = "thankyou.html";
+      // <a href="http://webprojects.eecs.qmul.ac.uk/na328/CsubA.html"></a>
+  }
