@@ -1,6 +1,24 @@
 <?php
 
+    $host   =   "dbprojects.eecs.qmul.ac.uk"  ;
+    $user   =   "na328"  ;
+    $pass   =   "nnCVKa2HcsZ0o"  ;
+    $db   =   "na328"  ;
+     
+    $link  =  mysql_connect ( $host ,  $user ,  $pass );
+    if (! $link ) {
+        die( 'Could not connect: '  .  mysql_error ());
+    }
+    echo  'Connected successfully' ;
 
+    $db_selected  =  mysql_select_db ( $db ,  $link );
+    if (! $db_selected ) {
+        die ( 'Can\'t use $db : '  .  mysql_error ());
+    }
+
+ 
+
+ 
         $firstname = $_POST['firstname'];
         $lastname  = $_POST['lastname'];
         $email = $_POST['emailadd'];
@@ -91,7 +109,10 @@
                           $comments,
                           $interview);
             
-        file_put_contents('survey.txt',  $options);
-        header('Location: thankyou.html');
+//        file_put_contents('survey.txt',  $options);
+//        header('Location: thankyou.html');
 
-?>
+        mysql_close ( $link );
+
+        ?>
+
