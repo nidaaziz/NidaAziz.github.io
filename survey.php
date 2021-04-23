@@ -17,10 +17,6 @@
     }
 
  
-
- 
-        $firstname = $_POST['firstname'];
-        $lastname  = $_POST['lastname'];
         $email = $_POST['emailadd'];
         $age = $_POST['age'];
         $gender    = $_POST['gender'];
@@ -64,9 +60,7 @@
         $comments = $_POST['comments'];
         $interview = $_POST['interview'];
 
-         $options = array($firstname,
-                          $lastname,
-                          $email,
+         $options = array($email,
                           $age,
                           $gender,
                           $emp,
