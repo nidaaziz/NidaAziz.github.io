@@ -36,6 +36,11 @@ function walkingappsFn(answer){
     } else if (answer == "no") {
       document.getElementById('yesQuestion').style.display = "none"
     }
+    document.getElementById("safeappsnever").checked = false;
+    document.getElementById("safeappshardly").checked = false;
+    document.getElementById("safeappssome").checked= false;
+    document.getElementById("safeappsoften").checked = false;
+    document.getElementById("safeappsalways").checked   = false;
   
   }
 
