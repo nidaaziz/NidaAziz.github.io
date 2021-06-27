@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 18px 0;
+      box-sizing: border-box;
+      }
+  </style>
+  <title> Sub-scenario 3-A </title>
+</head>
+<body>
+  <h2>Scenario 3 of 4 </h2>
+  
+  <section class=scenarioA>
+    <h3> Sub-scenario A </h3>
+    <form action="scenario3-c.php" method="POST">
+      <section id=part1a>    
+        <h4> Please answer the following questions related to the route </h4>
+
+        <label for="q1c"> Q1. Which road comes after Horseferry Road? </label>
+        <input type="text" id="q1c" name="q3c1[]" onchange="scene3c1Fn()" required>
+        <br>
+        <label for="q2c"> Q2. What point of interest comes after the highway?   </label>
+        <input type="text" id="q2c" name="q3c1[]" onchange="scene3c1Fn()" required>
+        <br>
+        <label for="q3c"> Q3. Which direction is the second turn? </label>
+        <input type="text" id="q3c" name="q3c1[]" onchange="scene3c1Fn()" required>
+        <br>
+        <label for="q4c"> Q4. Which road crosses over the river?  </label>
+        <input type="text" id="q4c" name="q3c1[]" onchange="scene3c1Fn()" required>
+        <br>
+        <label for="q5c"> Q5. What is the final point of interest on the route?  </label>
+        <input type="text" id="q5c" name="q3c1[]" onchange="scene3c1Fn()" required> 
+
+    </section>  
+    <br> 
+    <section id=part2a>
+      <h4>Part 2</h4>
+          <p> Following is a list of points of interest. Number them according to the order they appear in the route. </p>
+          <label for="poi1c"> Restaurant </label>
+          <input type="text" id="poi1c" name="q3c2[]" onchange="scene3c2Fn()" required>
+          <br>
+          <label for="poi2c"> Shops </label>
+          <input type="text" id="poi2c" name="q3c2[]" onchange="scene3c2Fn()" required>
+          <br>
+          <label for="poi3c"> Pedestrian crossing  </label>
+          <input type="text" id="poi3c" name="q3c2[]" onchange="scene3c2Fn()" required>
+          <br>
+          <label for="poi4c"> River </label>
+          <input type="text" id="poi4c" name="q3c2[]" onchange="scene3c2Fn()" required>
+          <br>
+          <label for="poi5c"> Highway </label>
+          <input type="text" id="poi5c" name="q3c2[]" onchange="scene3c2Fn()" required>
+    </section>        
+    <br>
+    <section id=part3a>
+      <h3> Part 3 </h3>
+      <p> From the following list of route descriptions, please choose one that represents the <strong>reverse</strong> of the original route in the auditory route overview. </p>
+      <input type="radio" name="part3c" value="opt1" onclick="scene3c3Fn()" required> 
+      "For 70 meters continue on Horseferry road eastwards. Turn left onto Broadlove lane and move forward for 300 meters. Turn right onto Jardine road and move forward for 45 meters. Turn right onto Branch road and move forward for 30 meters. Turn left onto Lilly bridge and move forward for 220 meters. Turn right onto Elf row and move forward for 65 meters. You have reached your destination." <br><br>
+      <input type="radio" name="part3c" value="opt2" onclick="scene3c3Fn()" required> 
+      "For 70 meters continue on Elf row northwards. Turn left onto Lilly Bridge and move forward for 300 meters. Turn right onto Branch road and move forward for 45 meters. Turn left onto Jardine road and move forward for 30 meters. Turn left onto Broadlove lane and move forward for 220 meters. Turn right onto Horseferry road and move forward for 65 meters. You have reached your destination." <br><br>
+      <input type="radio" name="part3c" value="opt3" onclick="scene3c3Fn()" required> 
+      "For 65 meters continue on Elf row northwards. Turn left onto Lilly Bridge and move forward for 220 meters. Turn right onto Branch road and move forward for 30 meters. Turn left onto Jardine road and move forward for 45 meters. Turn left onto Broadlove lane and move forward for 300 meters. Turn right onto Horseferry road and move forward for 70 meters. You have reached your destination." <br><br>
+    </section>    
+    <br><br>
+    <br><br>
+    <nav>
+      <button type="submit" name="submit" id="submit"> Save and go to Scenario 4 </button> 
+    </nav>  
+    <!-- <div class="controls">
+      <input type="button" value="Return to Subscenario C page" onclick="goingfwd()">    
+    </div> -->
+    </form>
+    <script src="./js/CsubC.js"></script>
+  </body>
+</html> 

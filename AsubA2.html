@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Sub-scenario A</title>
+
+    <link rel="stylesheet" href="style1.css">
+  </head>
+
+  <body>
+    <h3>Scenario 1 - Subscenario A - auditory route option 2</h3>
+    
+    <form>
+      <section id=s1suba1>
+        <br><br>
+        <input type="button" value="Play"   id= "play" onclick="togglePlay()"> 
+        <input type="button" value="Pause"  id= "pause" onclick="togglePause()">
+        <input type="button" value="Rewind current"   onclick="rewindcur()"> 
+        <input type="button" value="Rewind to previous"  onclick="rewindprev()"> 
+        <input type="button" value="Forward" onclick="forward()"> 
+        <input type="button" value="Forward to next turn" onclick="forwardnext()"> 
+        <input type="button" value="Restart" onclick="restart()"> <br><br>
+       
+        <input type="button" value="Mute speech"  id="muteSpeech" onclick="mutespeech()"> 
+        <input type="button" value="Mute auditory icons" id="muteAI" onclick="muteAIs()"> 
+        <input type="button" value="Mute auditory brackets" id="muteAB" onclick="muteABs()"> 
+        
+        
+        <!-- <a onClick="demoplay()">Click here to hear.</a> -->
+    </section>
+    <br><br>
+    <br><br>
+    <div class="controls">
+      <input type="button" value="Return to Subscenario A page" onclick="goingto()">    
+      <!-- <button id="submit" type="submit">  </button> -->
+    </div>
+    </form>
+    <script src="./js/AsubA2.js"></script>
+  </body>
+</html> 
+
+
+    

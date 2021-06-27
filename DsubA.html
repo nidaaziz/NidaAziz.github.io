@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 18px 0;
+      box-sizing: border-box;
+      }
+  </style>
+  <title> Sub-scenario 4-A </title>
+</head>
+<body>
+  <h2>Scenario 4 of 4 </h2>
+  <section class=scenarioA>
+    <form action="scenario4-a.php" method="post">
+      <h3> Sub-scenario A </h3>
+      <section id=part1a>    
+        <br><br>
+        <h4> Please answer the following questions related to the route </h4>
+        <label for="q1a">Q1. Placeholder question </label>
+        <input type="text" id="q1a" name="q41[]" onchange="audio1Fn()" required>
+        <br>
+        <label for="q2a">Q2. Placeholder question </label>
+        <input type="text" id="q2a" name="q41[]" onchange="audio1Fn()"required>
+        <br>
+        <label for="q3a">Q3. Placeholder question </label>
+        <input type="text" id="q3a" name="q41[]" onchange="audio1Fn()"required>
+        <br>
+        <label for="q4a">Q4. Placeholder question </label>
+        <input type="text" id="q4a" name="q41[]" onchange="audio1Fn()" required>
+        <br>
+        <label for="q5a">Q5. Placeholder question </label>
+        <input type="text" id="q5a" name="q41[]" onchange="audio1Fn()" required> 
+      </section>  
+      <br><br>
+      <nav>
+        <button type="submit" name="submit" id="submit"> Save and go to sub-scenario 4-B </button> 
+      </nav>  
+     </form>
+  </section>
+    <script src="./js/DsubA.js"></script>
+</body>
+</html> 

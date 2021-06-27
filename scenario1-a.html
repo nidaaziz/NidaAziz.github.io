@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 18px 0;
+        box-sizing: border-box;
+        }
+    </style>
+    <title> Subscenario 1-A </title>
+  </head>
+  <body>
+    <h2>Scenario 1 of 4 </h2>
+    <form action="scenario1-a.php" method="post">
+      <section class=scenarioA>
+        <h3> Sub-scenario A </h3>
+        There are a number of route options to go from location X to location Y given below. Please choose one that suits you. Please note, there are no incorrect answers. 
+        <br><br>
+        <section id=task1>
+          
+          <input type="radio" name="part1a" value="opt1" onclick="sceneaFn()" required> 
+          <a href="http://webprojects.eecs.qmul.ac.uk/na328/AsubA1.html">Auditory route option 1</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="part1a" value="opt2" onclick="sceneaFn()" required> 
+          <a href="http://webprojects.eecs.qmul.ac.uk/na328/AsubA2.html">Auditory route option 2</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="part1a" value="opt3" onclick="sceneaFn()" required> 
+          <a href="http://webprojects.eecs.qmul.ac.uk/na328/AsubA3.html">Auditory route option 3</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        </section>
+        <section id=feedback1>
+          <p>Please answer the following questions related to the route </p>
+          <label for="q11c">Q1. Was the information provided in the overview useful for you? </label>
+          <input type="text" id="q11c" name="q1c[]" onchange="fdbk1Fn()" required> 
+          <br>
+          <label for="q12c">Q2. Why did you make this choice? </label>
+          <input type="text" id="q12c" name="q1c[]" onchange="fdbk1Fn()" required>
+          <br>
+          <label for="q13c">Q3. Was the information provided in the overview sufficient to make a choice? </label>
+          <input type="text" id="q13c" name="q1c[]" onchange="fdbk1Fn()" required>
+          <br>
+          <label for="q14c">Q4. Did the number or placement of PoIs feature in your decision? </label>
+          <input type="text" id="q14c" name="q1c[]" onchange="fdbk1Fn()" required>
+          <br>
+          <label for="q15c">Q5. Did the number or placement of turns feature in your decision? </label>
+          <input type="text" id="q15c" name="q1c[]" onchange="fdbk1Fn()" required> 
+          <br>
+          <label for="q16c">Q6. Did the number or placement of auditory brackets feature in your decision? </label>
+          <input type="text" id="q16c" name="q1c[]" onchange="fdbk1Fn()" required> 
+          <br>
+          <label for="q17c">Q7. Any further comments? </label>
+          <input type="text" id="q17c" name="q1c[]" onchange="fdbk1Fn()" required> 
+        </section>
+      </section>
+      <br><br>
+      <div id="header"></div>
+      <nav>
+        <button type="submit" name="submit" id="submit"> Save and go to sub-scenario 1-b </button> 
+      </nav>  
+    </form>
+  <script type="text/javascript" src="./js/scenario1.js""></script>
+  </body>
+</html>

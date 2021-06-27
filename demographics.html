@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <title>Demographics</title>
+</head>
+
+
+<body> 
+<h1>Demographics information</h1>
+<form action="demographics.php" method="post">
+ 
+  <section id="Name">
+    <p> First Name </p>
+    <input type="text" id="fname" name="fname"  onchange="nameFn()" required>    
+    <p> Last Name </p>
+    <input type="text" id="lname" name="lname"  onchange="nameFn()" required>
+  </section>
+  <br> <br> <br
+
+  <section id="Gender">
+    <p> Gender </p>
+    <input type="radio" name="gender" value="male"   onclick="genderFn()" > Male 
+    <input type="radio" name="gender" value="female" onclick="genderFn()" > Female 
+    <input type="radio" name="gender" value="other"  onclick="genderFn()" > Other
+    <input type="radio" name="gender" value="prefer" onclick="genderFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+
+  <section id="AgeWise">
+    <p> Age </p>
+    <input type="text" id="age" name="age"  onchange="ageFn()">
+    <label for="age"></label>
+    <input type="radio" name="age" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+
+  <section id="Location">
+    <p> Geographical Location </p>
+    <input type="text" id="loc" name="loc"  onchange="locFn()">
+    <label for="age"></label>
+    <input type="radio" name="loc" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+  
+  <section id=Language>
+    <p> Level of comfort with English </p>
+    <input type="radio" name="lang" value="native" onclick="langFn()" > Native speaker &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="lang" value="second" onclick="langFn()"> Second language &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="lang" value="fluent" onclick="langFn()"> Conversationally fluent &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="lang" id="langother" value="other">Other <input id="langinputother" name="langother" type="text" onchange="changelangradioother()" />
+    <input type="radio" name="lang" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+
+  <section id=Sight>
+    <p> Sight classification </p>
+    <input type="radio" name="sight" value="totally"   onclick="sightFn()" > Totally blind &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="sight" value="partially" onclick="sightFn()"> Partially sighted &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="sight" id="sightother" value="other"> Other <input id="inputother" type="text" name="sightother" onchange="changesightradioother()" />
+    <input type="radio" name="sight" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+ 
+  <section id=OnsetAge>
+    <p>Age at onset of sight loss </p>
+      <input type="text" id="onset" name="onset"  onchange="onsetFn()" >
+    <label for="onset">  
+      <input type="radio" name="onset" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+ 
+  <section id=Asstech>
+    <p> Experience with assistive tech in years </p>
+    <label for="asstech">  Experience (in years) with assistive technology </label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text"  name="asstech" id="asstech"   onchange="asstechFn()" > 
+    <input type="radio" name="asstech" value="prefer" onclick="preferFn()" > Prefer not to say
+  </section>
+  <br> <br> <br>
+ 
+  <section id=Tacmap>
+    <p>  Have you every used tactile maps? </p>
+    <input type="radio" name="tacmap" id="tacmap" value="never"  onclick="tacmapFn()" > 2: Never &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="tacmap" id="tacmap" value="occasionally"  onclick="tacmapFn()" >  2: Occasionally &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="tacmap" id="tacmap" value="often" onclick="tacmapFn()" >  3: Often &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="tacmap" id="tacmap" value="regularly" onclick="tacmapFn()" > 4: Regularly &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="tacmap" value="prefer" onclick="preferFn()" > Prefer not to say
+    <br> <br>
+    <label for="elab">Please elaborate</label> 
+    <input type="text"  name="elab"   id="elab"  onchange="tacmapelab()">  
+  </section>
+  <br> <br> <br>
+  
+  <section id=Printmap>
+    <p>  Have you every used print maps? </p>
+    <input type="radio" name="printmap" id="printmap" value="never" onclick="printmapFn()" > 1: Never  &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="printmap" id="printmap" value="occasionally" onclick="printmapFn()" >  2: Occasionally &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="printmap" id="printmap" value="often" onclick="printmapFn()" >  3: Often &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="printmap" id="printmap" value="regularly" onclick="printmapFn()" > 4: Regularly  &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="printmap" value="prefer" onclick="preferFn()" > Prefer not to say
+    <br> <br>
+    <label for="printelab">Please elaborate</label> 
+    <input type="text"  name="printelab"   id="printelab" onchange="printmapelab()">  
+  </section>
+  <br> <br> <br>
+ 
+  <section id=Googlemap>
+    <p>  Do you use systems like Google Maps or Blind square for looking at routes? </p>
+    <input type="radio" name="googlemap" id="googlemap" value="never" onclick="googlemapFn()" > 1: Never   &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="googlemap" id="googlemap" value="occasionally" onclick="googlemapFn()" >  2: Occasionally  &nbsp;&nbsp;&nbsp;&nbsp  
+    <input type="radio" name="googlemap" id="googlemap" value="often" onclick="googlemapFn()" >  3: Often   &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="googlemap" id="googlemap" value="regularly" onclick="googlemapFn()" > 4: Regularly   &nbsp;&nbsp;&nbsp;&nbsp
+    <input type="radio" name="googlemap" value="prefer" onclick="preferFn()" > Prefer not to say
+    <br> <br>
+    <label for="googleelab">Please elaborate</label> 
+    <input type="text"  name="googleelab"   id="googleelab" onchange="googlemapelab()">  
+  </section>  
+  <br> <br> <br>
+  <nav>
+    <button type="submit" name="submit" id="submit"> Next </button> 
+  </nav>  
+</form>
+
+<script type="text/javascript" src="./js/demographics.js"></script>
+
+</body>
+</html>
