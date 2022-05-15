@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="surveystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <title>Street safety survey</title>
+  <style>
+    .nameapp{
+        margin-left: 50px;
+        margin-top: 25px;
+        line-height: 25px;
+        margin-right: 15px;
+        color: black;
+        font-size: 18px;
+      }
+      .particularconds{
+        margin-left: 50px;
+        margin-top: 5px;
+        line-height: 25px;
+        margin-right: 15px;
+        color: black;
+        font-size: 18px;
+      }
+      .button { 
+        border-radius: 8px;
+        float: right;
+        text-align: center;
+        margin-right: 30px;
+        height: 35px; 
+        width: 120px; 
+        font-size: 18px;
+        border-width: 3px;
+    }
+    .rectangle {
+      height: 50px;
+      width: 100px;
+      background-color: #555;
+    } 
+  </style>
+  </head>
+  <body>
+  
+  <div class="surveyform"> <h1> Street Safety Survey </h1> </div>
+    
+  <div class = "main">
+    <div class = "intro">
+      <br><br>
+        A warm hello to you.
+  
+        At WalkTogether it is our vision to create <b>co-designed products</b> for <b>womxn</b> (/wʊmən/)<sup><span title="Inclusive term for encompassing a broader range of gender identities than 'woman', and including trans and non-binary women">[?]</span></sup> to <b>enhance</b> their <b>street safety</b>. We believe in utilising the unique experiences, ideas and preferences of all womxn to design tech products that are more useful and usable for them. 
+        <br><br><br>
+        Through this survey we want to investigate whether womxn <b>feel safe</b> or not while <b>walking on the street</b> and what can be done to <b>improve</b> it. The survey has 21 questions in all and should take around 10-15 minutes of your time. It will provide us with information to start creating a positive impact. All your data will be completely anonymised. In the spirit of codesign, we kindly request you to <b>respond genuinely</b> and <b>generously</b>. Thank you so much.
+        <br><br><br>
+        If you would like to learn more about our work or discuss further, please email at info.buddyup@gmail.com
+        <br><br>
+    </div>
+ 
+    <br><br><br><br>
+    <!-- <form action="survey.php" method="POST"> -->
+      <form>
+      <section class="demographics">
+        <!-- <div class="name">
+          <label for="firstname"> First name: </label>
+              <input type="text" id="fname" name="firstname" onchange="nameFn()" size="15" maxlength="30">
+          <label for="lastname"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last  name: </label>
+              <input type="text" id="lname" name="lastname" onchange="nameFn()" size="15" maxlength="30">
+        </div>
+
+        <div class="email">
+          <label for="emailadd"> Email address: </label>
+              <input type="text" name="emailadd" size="15" maxlength="30" >
+        </div> -->
+
+        <div class="ageWise">
+          <label for="age"> Please select your age range: </label>
+            <select class="emplist" id="emp" name="emp">
+              <option selected="selected">(Select one)</option>
+              <option value="fifteen">   15-24</option>
+              <option value="twentyfive">25-34</option>
+              <option value="thirtyfive">35-44</option>
+              <option value="fortyfive"> 45-54</option>
+              <option value="fiftyfive">55-64</option>
+              <option value="sixtyfive"> Above 65</option>
+            </select>
+        </div>
+
+        <div class="gender">
+          <label for="gender"> Gender: </label>
+          <select class="emplist" id="gender" name="gender" oninput="genderFn(this.value)">
+            <option disabled selected value="default">(Select one)</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="trans">Transgender</option>
+            <option value="queer">Genderqueer</option>
+            <option value="none"> Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+          <input style="display:none;" id="genother" name="genother" type="text" />
+        </div>
+         
+        <div class="emp">
+          <label for="emp"> Employment status: </label>
+          <select class="emplist" id="emp" name="emp" oninput="empFn(this.value)">
+            <option disabled selected>(Select one)</option>
+            <option value="Employed">Employed</option>
+            <option value="Stayathome">Stay at home</option>
+            <option value="Self">Self employed</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Student">Student</option>
+            <option value="Other">Other</option> 
+          </select>    
+          <input style="display:none;" id="empother" name="empother" type="text" />
+        </div>
+
+        <div class="ethnicity">
+          <label for="ethnicity"> Which of these best describes your ethnic group: </label> 
+          <select class="emplist" id="ethnicity" name="ethnicity"  oninput="ethnicFn(this.value)">
+            <option disabled selected>(Select one)</option>
+            <option value="white">White</option>
+            <option value="mixed">Mixed</option>
+            <option value="asian">Asian or Asian British</option>
+            <option value="black">Black or Black British</option>
+            <option value="arab"> Arab</option>
+            <option value="none"> Prefer not to say</option>
+            <option value="Other">Other</option> 
+          </select>
+          <input style="display:none;" id="ethother" name="ethother" type="text" />
+        </div>
+    
+      <div class="city">
+        <label for="city"> City: </label>
+            <input type="text" name="city" size="25" maxlength="30" >
+      </div>
+
+      <br> <br> <br>
+      </section>
+      <section class="questions">
+        <div class="often">
+        <label for="oftenwalk">  1. How often do you walk on the streets by yourself? </label> <br>
+          <input type="radio" name="often" id="often" value="prefer" onclick="oftenFn()" > <label for="often"> Never &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="often" id="often" value="prefer" onclick="oftenFn()" > <label for="often"> Hardly ever  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="often" id="often" value="prefer" onclick="oftenFn()" > <label for="often"> Sometimes   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="often" id="often" value="prefer" onclick="oftenFn()" > <label for="often"> Often &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+          <input type="radio" name="often" id="often" value="prefer" onclick="oftenFn()" > <label for="often"> Regularly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+        </div>
+
+        <div class="howsafe">
+          <label for="howsafe"> 2. From the following options, choose how safe you feel while walking on the streets by yourself. </label> <br>
+          <input type="radio" name="safe" id="safe" value="prefer" onclick="howsafeFn()" > <label for="safe"> Very safe &nbsp;&nbsp; </label>
+          <input type="radio" name="safe" id="safe" value="prefer" onclick="howsafeFn()" > <label for="safe"> Moderately safe &nbsp;&nbsp; </label>
+          <input type="radio" name="safe" id="safe" value="prefer" onclick="howsafeFn()" > <label for="safe"> Neither safe nor unsafe &nbsp;&nbsp; </label>
+          <input type="radio" name="safe" id="safe" value="prefer" onclick="howsafeFn()" > <label for="safe"> Moderately unsafe &nbsp;&nbsp; </label>
+          <input type="radio" name="safe" id="safe" value="prefer" onclick="howsafeFn()" > <label for="safe"> Very unsafe &nbsp;&nbsp; </label>         
+        </div>
+        <div class="exp">
+          <label for="exp">  3. How often have you had an experience that made you feel concerned for your safety on the streets? </label><br>
+          <input type="radio" name="exp" id="exp" value="prefer" onclick="expFn()" > <label for="exp"> Never &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="exp" id="exp" value="prefer" onclick="expFn()" > <label for="exp"> Hardly ever  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="exp" id="exp" value="prefer" onclick="expFn()" > <label for="exp"> Sometimes   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="exp" id="exp" value="prefer" onclick="expFn()" > <label for="exp"> Often &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+          <input type="radio" name="exp" id="exp" value="prefer" onclick="expFn()" > <label for="exp"> Regularly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+
+        </div>
+
+        <div class="places">
+          <label for="places"> 4. From the following options, choose how safe you feel while walking alone in the following situations:</label> <br>
+         
+          <table class="placestable" style="width:100%">
+            <thead>
+                <tr>
+                    <th style="width:15%;"></th>
+                    <th style="width:15%;">Very safe </th>
+                    <th style="width:15%;">Moderately safe</th>
+                    <th style="width:20%;">Neither safe nor unsafe</th>
+                    <th style="width:15%;">Moderately unsafe</th>
+                    <th style="width:15%;">Very unsafe </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left"> i) On a main road</td>
+                    <td><input type="radio" value="Very safe"       name="mainrd" ></td>
+                    <td><input type="radio" value="Moderately safe" name="mainrd"></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="mainrd"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="mainrd"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="mainrd"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"> ii) On a side road</td>
+                    <td><input type="radio" value="Very safe"       name="siderd"/></td>
+                    <td><input type="radio" value="Moderately safe" name="siderd"/></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="siderd"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="siderd"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="siderd"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"> iii) In a public space</td>
+                    <td><input type="radio" value="Very safe"       name="public"/></td>
+                    <td><input type="radio" value="Moderately safe" name="public"/></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="public"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="public"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="public"/></td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;"> iv) In a secluded space</td>
+                  <td><input type="radio" value="Very safe"       name="sec"/></td>
+                  <td><input type="radio" value="Moderately safe" name="sec"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="sec"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="sec"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="sec"/></td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;"> v) In crowds (e.g. festivals, parade) </td>
+                  <td><input type="radio" value="Very safe"       name="crowd"/></td>
+                  <td><input type="radio" value="Moderately safe" name="crowd"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="crowd"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="crowd"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="crowd"/></td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;"> vi) Through a park</td>
+                  <td><input type="radio" value="Very safe"       name="park"/></td>
+                  <td><input type="radio" value="Moderately safe" name="park"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="park"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="park"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="park"/></td>
+              </tr>
+              <tr>
+                <td style="text-align: left;"> vii) During rush hour </td>
+                <td><input type="radio" value="Very safe"       name="rush"/></td>
+                <td><input type="radio" value="Moderately safe" name="rush"/></td>
+                <td><input type="radio" value="Neither safe nor unsafe" name="rush"/></td>
+                <td><input type="radio" value="Moderately unsafe" name="rush"/></td>
+                <td><input type="radio" value="Very unsafe"     name="rush"/></td>
+            </tr>
+            <tr>
+                  <td style="text-align: left;"> viii) On a weekday</td>
+                  <td><input type="radio" value="Very safe"       name="day"/></td>
+                  <td><input type="radio" value="Moderately safe" name="day"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="day"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="day"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="day"/></td>
+              </tr>
+              <tr>
+                <td style="text-align: left;"> ix) On a weekend</td>
+                <td><input type="radio" value="Very safe"       name="end"/></td>
+                <td><input type="radio" value="Moderately safe" name="end"/></td>
+                <td><input type="radio" value="Neither safe nor unsafe" name="end"/></td>
+                <td><input type="radio" value="Moderately unsafe" name="end"/></td>
+                <td><input type="radio" value="Very unsafe"     name="end"/></td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="particular">
+          <label for="particular"> 5. Are there any particular areas (such as bars, high streets, city centers, etc.) where you feel less safe than normal? Please mention which ones. </label>
+          <input type="textarea" name="particular"  ><br>
+        </div>
+
+        <div class="seasons">
+          <label for="seasons">6. From the following list, choose how safe you feel in the following different seasons/weather conditions:</label> <br>
+         
+          <table class="seasonstable" style="width:100%">
+            <thead>
+                <tr>
+                    <th style="width:15%;"></th>
+                    <th style="width:15%;">Very safe </th>
+                    <th style="width:15%;">Moderately safe</th>
+                    <th style="width:20%;">Neither safe nor unsafe</th>
+                    <th style="width:15%;">Moderately unsafe</th>
+                    <th style="width:15%;">Very unsafe </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left">i) Winters</td>
+                    <td><input type="radio" value="Very safe"       name="winters" ></td>
+                    <td><input type="radio" value="Moderately safe" name="winters"></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="winters"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="winters"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="winters"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">ii) Summers</td>
+                    <td><input type="radio" value="Very safe"       name="summers"/></td>
+                    <td><input type="radio" value="Moderately safe" name="summers"/></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="summers"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="summers"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="summers"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">iii) Rainy</td>
+                    <td><input type="radio" value="Very safe"       name="rainy"/></td>
+                    <td><input type="radio" value="Moderately safe" name="rainy"/></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="rainy"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="rainy"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="rainy"/></td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">iv) Other seasons</td>
+                  <td><input type="radio" value="Very safe"       name="oseas"/></td>
+                  <td><input type="radio" value="Moderately safe" name="oseas"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="oseas"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="oseas"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="oseas"/></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="particularseasons">
+            <label for="particularseasons"> 7. Are there any particular seasons/weather conditions that were not mentioned above when you feel less safe than normal? Please mention which ones. </label>
+            <input type="textarea" name="particularseasons"  ><br>
+        </div>
+
+        <div class="times">
+            <label for="times"> 8. From the following list, choose how safe you feel while walking alone at different times of the day:</label> <br>
+           
+            <table class="timestable" style="width:100%">
+              <thead>
+                  <tr>
+                      <th style="width:15%;"></th>
+                      <th style="width:15%;">Very safe </th>
+                      <th style="width:15%;">Moderately safe</th>
+                      <th style="width:20%;">Neither safe nor unsafe</th>
+                      <th style="width:15%;">Moderately unsafe</th>
+                      <th style="width:15%;">Very unsafe </th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:left">i) Early morning</td>
+                  <td><input type="radio" value="Very safe"         name="emorning" ></td>
+                  <td><input type="radio" value="Moderately safe"   name="emorning"></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="emorning"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="emorning"/></td>
+                  <td><input type="radio" value="Very unsafe"       name="emorning"/></td>
+              </tr>
+                  <tr>
+                      <td style="text-align:left">ii) Morning</td>
+                      <td><input type="radio" value="Very safe"       name="morning" ></td>
+                      <td><input type="radio" value="Moderately safe" name="morning"></td>
+                      <td><input type="radio" value="Neither safe nor unsafe" name="morning"/></td>
+                      <td><input type="radio" value="Moderately unsafe" name="morning"/></td>
+                      <td><input type="radio" value="Very unsafe"     name="morning"/></td>
+                  </tr>
+                  <tr>
+                      <td style="text-align:left">iii) Afternoon</td>
+                      <td><input type="radio" value="Very safe"       name="afternoon"/></td>
+                      <td><input type="radio" value="Moderately safe" name="afternoon"/></td>
+                      <td><input type="radio" value="Neither safe nor unsafe" name="afternoon"/></td>
+                      <td><input type="radio" value="Moderately unsafe" name="afternoon"/></td>
+                      <td><input type="radio" value="Very unsafe"     name="afternoon"/></td>
+                  </tr>
+                  <tr>
+                      <td style="text-align: left;">iv) Early evening</td>
+                      <td><input type="radio" value="Very safe"       name="eeven"/></td>
+                      <td><input type="radio" value="Moderately safe" name="eeven"/></td>
+                      <td><input type="radio" value="Neither safe nor unsafe" name="eeven"/></td>
+                      <td><input type="radio" value="Moderately unsafe" name="eeven"/></td>
+                      <td><input type="radio" value="Very unsafe"     name="eeven"/></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">v) Evening</td>
+                    <td><input type="radio" value="Very safe"       name="even"/></td>
+                    <td><input type="radio" value="Moderately safe" name="even"/></td>
+                    <td><input type="radio" value="Neither safe nor unsafe" name="even"/></td>
+                    <td><input type="radio" value="Moderately unsafe" name="even"/></td>
+                    <td><input type="radio" value="Very unsafe"     name="even"/></td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;">vi) Night</td>
+                  <td><input type="radio" value="Very safe"       name="night"/></td>
+                  <td><input type="radio" value="Moderately safe" name="night"/></td>
+                  <td><input type="radio" value="Neither safe nor unsafe" name="night"/></td>
+                  <td><input type="radio" value="Moderately unsafe" name="night"/></td>
+                  <td><input type="radio" value="Very unsafe"     name="night"/></td>
+                </tr>
+  
+              </tbody>
+            </table>
+          </div>
+            
+        <div class="particulartimes">
+              <label for="particulartimes"> 9. Are there any particular times when you feel less safe than normal? Please mention which ones. </label>
+              <input type="textarea" name="particulartimes"  ><br>
+          </div>
+          
+          <div class="conditions">
+            <label for="conditions"> 10. During the times you feel uncomfortable walking on the road, would you rather  </label> <br>
+            <input type="checkbox" name="yourself" id="stranger" value="prefer" onclick="condFn()" > <label for="conditions">  continue walking by yourself </label> <br>
+            <input type="checkbox" name="female"   id="stranger" value="prefer" onclick="condFn()" > <label for="conditions">  walk with a female you just met</label> <br>
+            <input type="checkbox" name="male"     id="stranger" value="prefer" onclick="condFn()" > <label for="conditions">  walk with a male you just met  </label> <br>
+            <input type="checkbox" name="other"    id="stranger" value="prefer"> <label for="conditions">  other </label> <input style="width:590px;" id="stranger"  name="otherconds" type="text" > 
+          </div>
+            
+        <div class="particularconditions">
+              <label for="particularconditions"> 11.  Are there any particular situations or conditions that we may have missed when you feel less safe than normal? Please mention which ones. </label>
+              <input type="textarea" name="particularconditions"  ><br>
+        </div>
+
+      
+        <div class="walkingapps">
+          <label for="walkingapps"> 12. Do you know of any mobile apps or features, like location sharing, that you can use when feeling uncomfortable while walking on the road? (If "No", form jumps to question 17) </label> <br>
+          <input type="radio" name="walkingapps" id="walkingappsyes" value="yes" onclick="walkingappsFn(this.value)" > <label for="yes"> Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="walkingapps" id="walkingappsno" value="no" onclick="walkingappsFn(this.value)" > <label for="no"> No  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        </div>
+        
+        <div class="safeapps" id="yesQuestion"  style="display:none;">
+          <label for="safeapps"> 13.  Do you use any mobile apps to feel more secure while walking on the road? (If "Never", form jumps to question 17) </label><br>
+          <input type="radio" name="safeapps" id="safeappsnever" value="never"      onchange="safeappsFn(this.value)" > <label for="safeappsnever"> Never &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="safeapps" id="safeappshardly"value="hardlyever" onchange="safeappsFn(this.value)" > <label for="safeappshardly"> Hardly ever  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="safeapps" id="safeappssome"  value="sometimes"  onchange="safeappsFn(this.value)" > <label for="safeappssome"> Sometimes   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="safeapps" id="safeappsoften" value="often"      onchange="safeappsFn(this.value)" > <label for="safeappsoften"> Often &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+          <input type="radio" name="safeapps" id="safeappsalways"value="always"     onchange="safeappsFn(this.value)" > <label for="safeappsalways"> Always &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>                   
+      </div>
+
+    <div  id="yes2Question" style="display:none;">
+        <div class="nameapp">
+          <label for="nameapp"> 14. Name a few apps that you use to feel more secure while walking on the road. 
+                <input type="textarea" name="nameapp"  ><br>
+          </div>
+
+        <div class="like">
+        <label for="like"> 15. What do you like about these apps?
+              <input type="textarea" name="like"  ><br>
+        </div>
+
+        <div class="dislike">
+          <label for="dislike"> 16. What do you dislike about these apps? </label>
+                <input type="textarea" name="dislike"  ><br>
+          </div>
+    </div>
+    
+    <div id="noQuestion"  style="display:none;">
+      <div class="connapps">
+        <label for="connapps"> 17.  If an app connects you to other women in your vicinity, would you choose to do this?</label><br>
+        <input type="radio" name="connapps" id="connappsabsnot"value="absnot"  onchange="connappsFn(this.value)" > <label for="connappsabsnot"> Absolutely not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        <input type="radio" name="connapps" id="connappspnot"  value="probnot" onchange="connappsFn(this.value)" > <label for="connappspnot"> Probably not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        <input type="radio" name="connapps" id="connappsmaybe" value="maybe"   onchange="connappsFn(this.value)" > <label for="connappsmaybe"> Maybe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        <input type="radio" name="connapps" id="connappsprob" value="prob"    onchange="connappsFn(this.value)" > <label for="connappsprob"> Probably &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        <input type="radio" name="connapps" id="connappsdef"   value="def"     onchange="connappsFn(this.value)" > <label for="connappsdef"> Definitely &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+      </div>
+
+      <div class="solution" >
+        <label for="solution"> 18. What, in your opinion, is the one solution that can be developed to improve womxn’s street safety? </label>
+              <input type="textarea" name="solution"  ><br>
+      </div>
+
+    <div class="tech">
+          <label for="tech"> 19. What sort of technology, in your opinion, could be employed to improve womxn's street safety? </label>
+                <input type="textarea" name="tech"  ><br>
+      </div>
+    
+    <div class="comments">
+          <label for="comments"> 20. Do you have any further comments? </label>
+                <input type="textarea" name="comments"  ><br>
+      </div>
+
+    <div class="interview">
+          <label for="interview"> 21. Would you like to participate in an interview to discuss this further? </label><br>
+          <input type="radio" name="interview" id="interview" value="prefer" onclick="interFn()" > <label for="safeapps"> Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+          <input type="radio" name="interview" id="interview" value="prefer" onclick="interFn()" > <label for="safeapps"> No  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><br>
+          <label for="email"> If yes, please provide an email or phone number to contact you.</label>
+          <input type="text" name="email"  ><br>
+        </div>
+  </section>
+  <br> <br> <br>
+
+  
+  <nav style="text-align: center;">
+    <button type="submit" class="button" name="submit" id="submit"> Submit </button> 
+  </nav>  
+  <div class="thankyou">
+    <p style="text-align: center;"> Thank you for your comments and time! </p>
+  </div>
+</div> 
+    
+        <!-- <div class="footer">
+          <p> www.HERE.com &nbsp;</p>
+        </div> -->
+    
+    
+    </form>
+    </div>
+  
+  
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+  
+  
+  </html>
+  
+  
